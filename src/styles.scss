@@ -4,14 +4,25 @@
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: rgb(96, 37, 126);
+  background-color: #7D0057;
   color: white;
   font-family: 'Noto Sans';
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 46px;
+  font-size: 50px;
   
+  .info {
+    border: solid 3px white;
+    border-radius: 15px;
+    width: 600px;
+    height: 400px;
+  }
+  
+  &__location {
+    text-align: center;
+  }
+
   &__title {
     font-weight: bold;
     text-align: center;
@@ -23,7 +34,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 70px;
   }
 
   &__icon {
@@ -34,12 +45,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-size: 46px;
     padding: 20px;
-
-    span:nth-child(n) {
-      padding-top: 15px;
+    &__time, &__date {
+      display: flex;
+      justify-content: center;
+      align-items: flex;
     }
+  
   }
-
-
 }

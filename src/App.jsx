@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import moment from 'moment';
+import React, { Component, Fragment } from 'react';
 import axios from 'axios';
+import moment from 'moment';
 import { TiWeatherCloudy } from 'react-icons/ti';
-
+import { IoMdTime, IoIosCalendar } from 'react-icons/io';
 
 import 'reset-css';
 import st from './styles.scss'
@@ -18,7 +18,12 @@ export default class App extends Component {
 
   componentWillMount() {
     this.weatherNow();
+    window.addEventListener('scroll', this.getRandomNumber);
+    // window.addEventListener('click', this.getRandomNumber);
+  }
 
+  getRandomNumber() {
+    console.log(Math.floor(Math.random() * (256 - 1)) + 1);
   }
 
   weatherNow() {
@@ -48,27 +53,37 @@ export default class App extends Component {
     // isLoading
     
     // date
-    var date = moment.unix(this.state.currently.time).format("DD.MM.YYYY");
-    let time = moment.unix(this.state.currently.time).format("h:mm:ss");
+    let date = moment.unix(this.state.currently.time).format("DD.MM.YYYY");
+    let time = moment.unix(this.state.currently.time).format("H:mm:ss");
     // celsius
     const temperature = ((this.state.currently.temperature - 32) * 5/9).toFixed(1);
 
     return (
-      <div className={st.container} onClick={this.weatherNow}>
-        <div>
-          <p className={st.container__title}>Weather today</p>
-          <div>Location: {this.state.data.timezone}</div>
-          <div className={st.container__date}>
-            <span>{time}</span>
-            <span>{date}</span>
+      <Fragment>
+        
+        <div className={st.container} onClick={this.weatherNow}>
+          <div className={st.info}>
+            <p className={st.container__title}>Weather today</p>
+            <div className={st.container__location}>
+              Location: {this.state.data.timezone}
+            </div>
+            <div className={st.container__date}>
+              <div className={st.container__date__time}>
+                <IoMdTime />
+                <span>{time}</span>
+              </div>
+              <div className={st.container__date__date}>
+                <IoIosCalendar />
+                <span>{date}</span>
+              </div>
+            </div>
+            <div className={st.container__temperature}>
+              {this.iconRender}
+              <p>{temperature}°C</p>
+            </div>
           </div>
-          <div className={st.container__temperature}>
-            {this.iconRender()}
-            <p>{temperature}°C</p>
-          </div>
-
         </div>
-      </div>
+      </Fragment>
     );
   };
 }
