@@ -84,6 +84,7 @@ export default class App extends Component {
             </div>
             <div className={st.fb}>
               <img 
+                className={st.weather__icon}
                 src={WeatherSun}
                 alt="Weather"
               />
