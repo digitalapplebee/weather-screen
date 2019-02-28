@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+.container {
+  height: calc(100vh - 120px);
+  color: white;
+  font-family: 'Noto Sans';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  
+  .info {
+    border: solid 3px white;
+    border-radius: 40px;
+    width: 900px;
+    height: 450px;
+  }
+  
+  .location {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .title {
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 3px solid white;
+  }
+
+  .temperature {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+  }
+
+  &__icon {
+    font-size: 86px;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 46px;
+    padding: 20px;
+    &__time, &__date {
+      display: flex;
+      justify-content: center;
+      align-items: flex;
+      padding-top: 10px;
+    }
+  }
+
+  .fb {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-height: 700px) {
+  .container {
+
+    .info {
+      border-radius: 35px;
+      width: 700px;
+      height: 400px;
+    }
+  }
+}

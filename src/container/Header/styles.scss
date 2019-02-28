@@ -1,0 +1,27 @@
+.header {
+  height: 120px;
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 200px -120px 200px;
+
+  button {
+    border: 2px solid white;
+    border-radius: 30px;
+    background: transparent;
+    color:white;
+    font-size: 22px;
+    height: 40px;
+    width: 200px;
+    cursor: pointer;
+  }
+}
+
+@media (max-height: 750px) {
+  .header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
