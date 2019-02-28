@@ -5,5 +5,31 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 100px;
+  color: white;
+  font-size: 24px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+  p {
+    margin-right: 30px;
+  }
+
+  .socials {
+    display: flex;
+    justify-items: center;
+
+    img {
+      height: 35px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    img:nth-child(even) {
+      width: 50px;
+    }
+
+    img:last-child(n+3) {
+      color: black;
+    }
+  }
+
 }

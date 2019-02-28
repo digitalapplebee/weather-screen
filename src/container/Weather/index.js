@@ -3,11 +3,8 @@ import axios from 'axios'
 import moment from 'moment'
 import { TiWeatherCloudy } from 'react-icons/ti'
 import { IoMdTime, IoIosCalendar } from 'react-icons/io'
-
 import TemperatureIcon from '../../assets/temperature.svg'
 import WeatherSun from '../../assets/Weather-sun.svg'
-
-import 'reset-css'
 import st from './styles.scss'
 
 const API = "https://api.darksky.net/forecast/da22cd57814b7bb058ba37ba125884b4/53.9,27.56667"
@@ -24,7 +21,7 @@ export default class App extends Component {
 
   componentWillMount() {
     this.weatherNow()
-    window.addEventListener('scroll', this.getRandomNumber)
+    // window.addEventListener('scroll', this.getRandomNumber)
   }
 
   componentDidMount() {
@@ -32,9 +29,9 @@ export default class App extends Component {
   }
 
   // random 1-255 for color
-  getRandomNumber() {
-    console.log(Math.floor(Math.random() * (256 - 1)) + 1)
-  }
+  // getRandomNumber() {
+  //   console.log(Math.floor(Math.random() * (256 - 1)) + 1)
+  // }
 
   weatherNow() {
     axios.get(API)
