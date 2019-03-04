@@ -4,6 +4,7 @@ import moment from 'moment'
 import { TiWeatherCloudy } from 'react-icons/ti'
 import { IoMdTime, IoIosCalendar } from 'react-icons/io'
 import TemperatureIcon from '../../assets/temperature.svg'
+import RefreshIcon from '../../assets/refresh.svg'
 import WeatherSun from '../../assets/Weather-sun.svg'
 import st from './styles.scss'
 
@@ -78,7 +79,15 @@ export default class App extends Component {
       <Fragment>
         <div className={st.container} onClick={this.weatherNow}>
           <div className={st.info}>
-            <p className={st.title}>Weather today</p>
+            <div className={st.header__container}>
+              <p className={st.title}>Weather today</p>
+              <img 
+                src={RefreshIcon}
+                alt="Refresh"
+                className={st.refresh__icon} 
+                onClick={this.weatherNow}
+              />
+            </div>
             <div className={st.location}>
               Location: {this.state.data.timezone}
             </div>

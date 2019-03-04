@@ -21,12 +21,28 @@
     margin-top: 20px;
   }
 
-  .title {
-    font-weight: bold;
-    text-align: center;
-    padding: 15px;
+  .header__container {
+    display: grid;
+    grid-template-columns: 1fr 50px;
     border-bottom: 3px solid white;
+
+    .title {
+      font-weight: bold;
+      text-align: center;
+      padding: 15px;
+      margin-left: 50px;
+    }
+
+    .refresh__icon {
+      color: white;
+      width: 40px;
+      right: 50px;
+      top: 20px;
+      position: relative;
+      cursor: pointer;
+    }
   }
+
 
   .temperature {
     display: flex;
@@ -67,6 +83,7 @@
     width: 180px;
     height: 180px;
   }
+
 }
 
 @media (max-height: 700px) {
