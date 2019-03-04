@@ -11,9 +11,15 @@ const Footer = () => (
         <p>digitalapplebee</p>
       </div>
       <div className={st.socials}>
-        <img src={TelegramIcon} alt="Telegram" />
-        <img src={GmailIcon} alt="Gmail" />
-        <img src={GithubIcom} alt="Github" />
+        <a href="https://telegram.me/digitalapplebee">
+          <img src={TelegramIcon} alt="Telegram" />
+        </a>
+        <a href="mailto:digitalapplebee@gmail.com">
+          <img src={GmailIcon} alt="Gmail" />
+        </a>
+        <a href="https://github.com/digitalapplebee">
+          <img src={GithubIcom} alt="Github" />
+        </a>
       </div>
     </div>
   </footer>
