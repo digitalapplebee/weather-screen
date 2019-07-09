@@ -3,10 +3,10 @@ import st from './styles.scss'
 
 const Header = () => (
   <div className={st.header}>
-    <button>Random</button>
+    <button>Original</button>
     <button>Black</button>
-    <button>Invert</button>
-    <button>Image</button>
+    <button>Random</button>
+    <button>minimalism</button>
   </div>
 )
 
