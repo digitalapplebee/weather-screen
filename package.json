@@ -30,7 +30,7 @@
     "kind-of": "^6.0.3",
     "lodash": "^4.17.19",
     "moment": "^2.23.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.14.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-css-modules": "^4.7.9",
