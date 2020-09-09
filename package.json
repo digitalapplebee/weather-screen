@@ -15,7 +15,7 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
-    "bl": "^4.0.3",
+    "bl": "^1.2.3",
     "react-hot-loader": "^4.6.3",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.1",
